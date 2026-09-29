@@ -15,7 +15,7 @@ const BlogPosts = () => {
             })
             .catch((err) => {
                 console.error(err);
-                setError("Nie udało się pobrać wpisów.");
+                setError("Failed to load blog posts.");
             })
             .finally(() => {
                 setLoading(false);

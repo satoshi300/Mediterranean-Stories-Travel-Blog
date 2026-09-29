@@ -7,7 +7,6 @@ import {
 import BlogPost from './BlogPost';
 import Page from './Page'
 import Nav from './Nav';
-import ContactForm from './ContactForm';
 
 const App = () => {
     return (
@@ -16,7 +15,6 @@ const App = () => {
                 <Route path='/' Component={Page} />
                 <Route path='/blog/:uid' Component={BlogPost} />
                 <Route path='/nav' Component={Nav} />
-                <Route path='/contact' Component={ContactForm} />
             </Routes>
         </Router>
     )

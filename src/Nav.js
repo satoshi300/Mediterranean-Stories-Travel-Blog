@@ -40,8 +40,6 @@ const Nav = () => {
                         path = '/';
                     } else if (link.type === 'blog_post') {
                         path = `/blog/${link.uid}`;
-                    } else if (link.type === 'contact_form') {
-                        path = '/contact';
                     } else {
                         return null;
                     }

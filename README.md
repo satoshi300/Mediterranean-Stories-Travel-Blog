@@ -1,69 +1,175 @@
-> ⭐ ***README** to coś więcej niż opis. Poprzez nie **pokazujesz swoje mocne strony** – swoją dokładność, sposób myślenia i podejście do rozwiązywania problemów. Niech Twoje README pokaże, że masz **świetne predyspozycje do rozwoju!***
-> 
-> 🎁 *Zacznij od razu. Skorzystaj z **[szablonu README i wskazówek](https://github.com/devmentor-pl/readme-template)**.* 
+![Mediterranean Stories](./src//images/Homepage.png)
+
+# Mediterranean Stories Travel Blog
+
+🔗 **Live demo:** [Mediterranean Stories Travel Blog](https://mediterranean-stories-travel-blog.vercel.app/)
+
+Mediterranean Stories is a responsive travel blog about the places, food and culture of the Mediterranean. Visitors can browse featured articles, read individual posts and explore curated resources.
+
+The website is built with React, and its pages, navigation and editorial content are managed in Prismic. This project gave me practice working with a headless CMS, fetching API data and building client-side routes.
 
 &nbsp;
 
+---
 
-# Headless CMS
+## 🚀 Main Features
 
-[Headless CMS](https://www.unity.pl/blog/co-warto-wiedziec-o-headless-cms/) to narzędzie, które pozwala tworzyć zawartość strony bez potrzeby budowania dedykowanego panelu administracyjnego. 
-
-Przy pomocy odpowiedniego [UI](https://en.wikipedia.org/wiki/User_interface_design) możesz „wyklikać” potrzebne pola, które stworzą strukturę dla zawartości strony.
-
-Treści i zasoby uzupełnia się przez wygodny formularz (możesz to robić Ty, klient czy pracownik), a następnie pobiera przez API. 
-
-Headless CMS-y są bardzo wygodne dla programistów front-end, którzy nie chcą tracić czasu na rozwiązania back-endowe.
-
-## Prismic
-
-Twoim zadaniem będzie wykorzystać headless CMS – [Prismic](https://prismic.io/).
-
-## API
-
-Utwórz blog, którego zawartość będzie pobierana przez [API Prismica](https://prismic.io/docs/technologies/introduction-to-the-content-query-api).
-
-Dokumentacja zawiera opis narzędzi przeznaczonych dla danej technologii, np. [JavaScriptu](https://prismic.io/docs/technologies/integrating-with-an-existing-project-javascript), a nawet [Reacta](https://prismic.io/docs/technologies/start-a-prismic-project-from-scratch-with-reactjs).
-
-Udostępnia również [przydatne narzędzie](https://prismic.io/docs/technologies/the-rest-api-browser) do testowania zapytań pod adresem: `[nazwa-przestrzeni].prismic.io/api`.
-
-> **Uwaga:** Być może zechcesz skorzystać z `create-react-app`. Pamiętaj wówczas, że od wersji 18 Reacta przy korzystaniu ze StrictMode w trybie developerskim możesz zauważyć dwukrotne uruchomienie hooka `useEffect()` lub metody `.componentDidMount()`. Zamiast wyłączać StrictMode, możesz zastosować [dobre praktyki fetchowania danych](https://beta.reactjs.org/learn/synchronizing-with-effects#fetching-data).
-
-## Podstawowe założenia
-
-Blog powinien posiadać wpisy, które zawierają co najmniej:
-- tytuł
-- wstęp
-- zawartość
-- zdjęcie
-- [slug/alias](https://webwavecms.com/blog/slug)
-- kategorie.
-
-> **Podpowiedź:** Najlepiej będzie, jeśli utworzysz w [panelu](https://prismic.io/dashboard) dwa `Custom Type` określane mianem `Repeatable Type`, tj. `post`oraz `category`, i powiążesz je między sobą przy pomocy `Content relationship`. Możesz też wykorzystać `Group`, jeśli do jednego wpisu będziesz chciał przyporządkować kilka kategorii. 
-
-### React Router DOM
-
-Największy nacisk w tym projekcie powinieneś położyć na odpowiednie przygotowanie adresów URL – tak aby były one dobrze napisane pod względem UX.
-
-Może warto zrobić listę kategorii, które pozwolą użytkownikowi czytać tylko interesujące go materiały.
-
-Może warto również dodać do adresu URL datę publikacji wpisu lub przynajmniej rok i miesiąc – aby móc wyświetlać artykuły z danego przedziału czasowego.
-
-Na przykład `/2020/11/` wyświetli wszystkie artykuły opublikowane w listopadzie 2020 r.
-
-Pamiętaj też o odpowiedniej **paginacji**. Podziel wyświetlanie zawartości na części, gdzie na jednej podstronie widać maksymalnie 6 wpisów.
-
-### Przykłady
-
-W dokumentacji Prismica znajdziesz [przykłady implementacji dla Reacta](https://prismic.io/docs/technologies/example-projects-reactjs), np. [prosty blog](https://react-blog-demo.netlify.app/) czy [blog z kilkoma podstronami](https://react-website-demo.netlify.app/).
-
-Proponuję zapoznać się z nimi, zanim przejdziesz do własnej implementacji. 
-
-W przykładach znajdziesz również wykorzystanie przydatnego narzędzia [React Helmet](https://www.npmjs.com/package/react-helmet), które pozwala w wygodny sposób zarządzać elementami zapisanym w `<head>`, np. `<title>`.
-
+- Homepage content managed with Prismic slices
+- Blog post listing with featured images
+- Individual article pages loaded by their Prismic UID
+- CMS-managed navigation and resource links
+- Internal navigation between the homepage and articles
+- Responsive layouts for desktop and mobile screens
 
 &nbsp;
 
-> ⭐ ***README** to coś więcej niż opis. Poprzez nie **pokazujesz swoje mocne strony** – swoją dokładność, sposób myślenia i podejście do rozwiązywania problemów. Niech Twoje README pokaże, że masz **świetne predyspozycje do rozwoju!***
-> 
-> 🎁 *Zacznij od razu. Skorzystaj z **[szablonu README i wskazówek](https://github.com/devmentor-pl/readme-template)**.* 
+---
+
+## 💡 Technologies
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Prismic](https://img.shields.io/badge/Prismic-5163BA.svg?style=for-the-badge&logo=prismic&logoColor=white)
+
+&nbsp;
+
+---
+
+## 🔗 See also
+
+Are you interested in **JavaScript and Frontend Development**?
+See my other projects on my GitHub profile [here](https://github.com/satoshi300).
+
+&nbsp;
+
+---
+
+## 💿 Installation
+
+The application is built with **React** and **JavaScript**, with content managed in **Prismic**. **Node.js** and **npm** are only required to install dependencies and run the development and build scripts.
+
+1. Clone or download the repository
+
+```bash
+git clone https://github.com/satoshi300/Mediterranean-Stories-Travel-Blog.git
+cd Mediterranean-Stories-Travel-Blog
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+The application uses the Prismic repository configured in `src/prismic.js`. Published homepage, navigation and blog post content is required for the website to display its content.
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+&nbsp;
+
+---
+
+## 🤔 Solutions provided in the project
+
+### 1. Fetching blog posts from Prismic
+
+The blog listing loads all documents of the `blog_post` type from the CMS.
+
+```javascript
+client.getAllByType("blog_post")
+	.then((resp) => {
+		setPosts(resp);
+	})
+	.catch((err) => {
+		console.error(err);
+		setError("Failed to load blog posts.");
+	})
+	.finally(() => {
+		setLoading(false);
+	});
+```
+
+### 2. Loading an individual post by its UID
+
+The post route provides a UID, which is used to request and render the matching Prismic document.
+
+```javascript
+const { uid } = useParams();
+
+client.getByUID("blog_post", uid)
+	.then((post) => setPost(post));
+```
+
+### 3. Navigating between application pages
+
+React Router maps the homepage and individual blog posts to separate routes. The application uses `HashRouter`, so routes appear after a `#` in the browser URL.
+
+```javascript
+<Routes>
+	<Route path="/" Component={Page} />
+	<Route path="/blog/:uid" Component={BlogPost} />
+</Routes>
+```
+
+### 4. Connecting Prismic document links to app routes
+
+Links to blog documents use the application's `/blog/:uid` route. Other link types are rendered with Prismic's link component.
+
+```javascript
+<Link to={`/blog/${link.add_link.uid}`}>
+	{link.add_link.text}
+</Link>
+```
+
+### 5. Issue | Solution
+
+| Issue | Solution |
+| --- | --- |
+| Keeping page content easy to update | Managed editorial content in Prismic |
+| Loading the correct article | Queried blog posts by their UID |
+| Navigating to CMS-linked articles | Connected document links to React Router routes |
+| Supporting different screen sizes | Used responsive CSS layouts |
+
+&nbsp;
+
+---
+
+## 💭 Conclusions for future projects
+
+This project helped me practice building a React website around content from a headless CMS. I learned how to fetch Prismic documents, render rich text and images, and connect CMS document links to client-side routes.
+
+In future projects I would like to improve:
+
+- improving loading and error states across all pages
+- adding article categories and pagination
+- adding automated tests for routes and CMS content
+
+&nbsp;
+
+---
+
+## 🙋‍♂️ Feel free to contact me
+
+If you like the project or have suggestions, feel free to reach out via [GitHub](https://github.com/satoshi300) or [LinkedIn](https://www.linkedin.com/in/michal-wasiak-457a5331/).
+
+&nbsp;
+
+---
+
+## 👏 Thanks / Special thanks / Credits
+
+Thanks to my [Mentor - devmentor.pl](https://devmentor.pl/) for providing this project brief and code review.
