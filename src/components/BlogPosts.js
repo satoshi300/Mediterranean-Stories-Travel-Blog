@@ -1,26 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { PrismicImage } from "@prismicio/react";
 import { Link } from "react-router";
-import { client } from "./prismic";
+import { client } from "../prismic";
+import Pagination from "./Pagination";
 
 const BlogPosts = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(0);
+
 
     useEffect(() => {
-        client.getAllByType("blog_post")
+        setLoading(null);
+        setError(null);
+
+        client.getByType("blog_post", {
+            pageSize: 2,
+            page: page,
+        })
             .then((resp) => {
-                setPosts(resp);
+                setPosts(resp.results);
+                setTotalPages(resp.total_pages);
             })
             .catch((err) => {
-                console.error(err);
                 setError("Failed to load blog posts.");
             })
             .finally(() => {
                 setLoading(false);
             });
-    }, []);
+    }, [page]);
 
     if (loading) return <p className="blog-status" role="status">Loading posts...</p>;
     if (error) return <p className="blog-status" role="alert">{error}</p>;
@@ -36,6 +46,11 @@ const BlogPosts = () => {
                     </Link>
                 </article>
             ))}
+            <Pagination
+                page={page}
+                totalPages={totalPages}
+                onPageChange={setPage}
+            />
         </section>
     );
 };

@@ -4,9 +4,9 @@ import {
     Routes,
     Route
 } from "react-router";
-import BlogPost from './BlogPost';
-import Page from './Page'
-import Nav from './Nav';
+import BlogPost from './components/BlogPost';
+import Page from './components/Page'
+import Nav from './components/Nav';
 
 const App = () => {
     return (

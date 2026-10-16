@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { PrismicRichText, PrismicImage, PrismicLink } from "@prismicio/react";
 import { Link } from "react-router";
-import { client } from './prismic'
+import { client } from '../prismic'
 import BlogPosts from "./BlogPosts";
 import Nav from "./Nav";
-import './Page.css'
+import '../style/Page.css'
 
 const Page = () => {
     const [page, setPage] = useState(null);
@@ -15,11 +15,9 @@ const Page = () => {
                 fetchLinks: ['blog_post.title', 'blog_post.content'],
             })
             .then((resp) => {
-                console.log(resp)
                 setPage(resp)
             })
             .catch((err) => {
-                console.log(err)
             })
     }, [])
 
@@ -63,9 +61,9 @@ const Page = () => {
                     <PrismicRichText field={hero.primary.description} />
                     <PrismicImage field={hero.primary.interface_image} className="hero__interface" />
                 </div>
+                
             </header>
             <BlogPosts />
-
             <section className="card-grid" aria-label="Features">
                 {cardGrid.primary.cards.map((card, index) => (
                     <article className="feature-card" key={index}>

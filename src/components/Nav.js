@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { PrismicText } from '@prismicio/react';
-import { client } from './prismic'
+import { client } from '../prismic'
 import { Link } from 'react-router';
 
-import './Nav.css';
+import '../style/Nav.css';
 
 const Nav = () => {
     const [navData, setNavData] = useState(null)
@@ -12,19 +12,15 @@ const Nav = () => {
         client
             .getSingle('global_nav')
             .then((resp) => {
-                console.log('Menu:', resp.data.menu_items);
                 setNavData(resp.data)
             })
             .catch((err) => {
-                console.log("Error fetching Prismic menu:", err)
             })
     }, [])
 
     if (!navData) {
         return <p className="nav-status">'Loading...'</p>
     }
-
-    console.log(navData)
 
     return (
         <nav className="site-navigation">
@@ -50,14 +46,6 @@ const Nav = () => {
                         </li>
                     );
                 })}
-                {/* {navData.menu_items.map((item, index) => (
-                    <li key={index}>
-                        <Link to="/">
-                            {item.menu_label}
-                        </Link>
-                    </li>
-
-                ))} */}
             </ul>
         </nav>
     )

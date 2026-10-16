@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
-import { client } from "./prismic";
+import { client } from "../prismic";
 import { PrismicImage, PrismicRichText } from "@prismicio/react";
-import "./Page.css";
+import "../style/Page.css";
 import Nav from "./Nav";
 
 const BlogPost = () => {
