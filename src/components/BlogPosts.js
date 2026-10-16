@@ -17,7 +17,7 @@ const BlogPosts = () => {
         setError(null);
 
         client.getByType("blog_post", {
-            pageSize: 2,
+            pageSize: 4,
             page: page,
         })
             .then((resp) => {
